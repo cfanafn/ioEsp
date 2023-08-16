@@ -6,7 +6,7 @@
 #define BLYNK_AUTH_TOKEN            "VlrEEyYCebxnAfTxa-ym8ke17zU5p-Mf"
 
 
-#define BLYNK_PRINT Seriall
+#define BLYNK_PRINT Serial
 
 
 #include <WiFi.h>
@@ -19,7 +19,7 @@ char pass[] = "Hikari31";
 #include <Adafruit_NeoPixel.h>
  Adafruit_NeoPixel pixels = Adafruit_NeoPixel(5, 4, NEO_GRB + NEO_KHZ800);
 
-BLYNK_WRITE(V3)
+BLYNK_WRITE(V0)
 {
 int pinValue = param.asInt();
   if (pinValue == 1) {
@@ -45,14 +45,9 @@ int pinValue = param.asInt();
 
 BlynkTimer Timer1;
 
-void Timer2_TimerEvent()
+void Timer1_TimerEvent()
 {
-  Blynk.virtualWrite(V3, ultrasonic(12,27));
-}
-
-void Timer2_TimerEvent()
-{
-  Blynk.virtualWrite(V3, ultrasonic(12,27));
+  Blynk.virtualWrite(V2, ultrasonic(12,27));
 }
 
 BLYNK_WRITE(V4)
