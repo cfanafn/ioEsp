@@ -45,12 +45,12 @@ int pinValue = param.asInt();
 
 BlynkTimer Timer1;
 
-void Timer1_TimerEvent()
+void Timer2_TimerEvent()
 {
   Blynk.virtualWrite(V3, ultrasonic(12,27));
 }
 
-void Timer1_TimerEvent()
+void Timer2_TimerEvent()
 {
   Blynk.virtualWrite(V3, ultrasonic(12,27));
 }
