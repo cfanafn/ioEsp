@@ -19,7 +19,7 @@ char pass[] = "Hikari31";
 #include <Adafruit_NeoPixel.h>
  Adafruit_NeoPixel pixels = Adafruit_NeoPixel(5, 4, NEO_GRB + NEO_KHZ800);
 
-BLYNK_WRITE(V1)
+BLYNK_WRITE(V3)
 {
 int pinValue = param.asInt();
   if (pinValue == 1) {
